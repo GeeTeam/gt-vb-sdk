@@ -11,8 +11,8 @@ Imports System.IO
 Public Class Geetestlib
     Public privateKey
 
-    Public Sub New()
-        privateKey = "55e100f0bd6cc6279d47b80b3ccedbf7"
+    Public Sub New(ByVal key As String)
+        privateKey = key
     End Sub
 
     Public Function geetest_validate(ByVal challenge As String, ByVal validate As String, ByVal seccode As String)

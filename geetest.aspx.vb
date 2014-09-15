@@ -9,7 +9,7 @@
 
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim geetest_validate As New Geetestlib()
+        Dim geetest As New Geetestlib("55e100f0bd6cc6279d47b80b3ccedbf7")
         Dim result As Boolean
         Dim challenge As String = Request.Params("geetest_challenge")
         Dim validata As String = Request.Params("geetest_validate")

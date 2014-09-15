@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="geetest.aspx.vb" Inherits="Geetest_VBSDK.WebForm1" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="geetest.aspx.vb" Inherits="gt_vb_sdk.WebForm1"%>
 
 <!DOCTYPE html>
 
