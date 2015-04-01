@@ -14,7 +14,7 @@ Public Class Geetestlib
     Public challenge As String
     Public productType As String
     Public popupBtnID As String
-    Private version As String = "2.15.4.1"
+    Private version As String = "2.15.4.1.1"
     Public Sub New(ByVal key As String)
         privateKey = privateKey
     End Sub
@@ -33,7 +33,7 @@ Public Class Geetestlib
         path = "/validate.php"
         port = 80
         If (validate.Length > 0 And geetest_checkResultByPrivate(challenge, validate)) Then
-            Dim query As String = "seccode=" + seccode
+            Dim query As String = "seccode=" + seccode + "&sdk=vb_" + version
             Dim response As String = ""
             Try
                 response = geetests_postValidate(host, path, query, port)
@@ -82,8 +82,6 @@ Public Class Geetestlib
 
     Private Function geetests_postValidate(ByVal host As String, ByVal path As String, ByVal data As String, ByVal port As Integer)
         Dim url As String = host + path
-        Dim sdkInfo As String = "&sdk=" + version + "&sdklang=vb"
-        data = data + sdkInfo
         Dim request As HttpWebRequest = DirectCast(WebRequest.Create(url), HttpWebRequest)
         request.Method = "POST"
         request.ContentType = "application/x-www-form-urlencoded"
