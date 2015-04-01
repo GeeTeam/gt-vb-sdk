@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="geetest.aspx.vb" Inherits="gt_vb_sdk.WebForm1"%>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="demo.aspx.vb" Inherits="demo.demo" %>
 
 <!DOCTYPE html>
 
@@ -18,7 +18,7 @@
           <td>密码</td><td><input type="password"/></td>
        </tr>
        <tr>
-          <td colspan="2"><script type="text/javascript" src="http://api.geetest.com/get.php?gt=eec109e39008039b1f59dc812b55988d"></script></td>
+          <td colspan="2"><script type="text/javascript" src="<%=get_captcha() %>"></script></td>
        </tr>
        <tr>
           <td>
@@ -32,3 +32,4 @@
     </form>
 </body>
 </html>
+
