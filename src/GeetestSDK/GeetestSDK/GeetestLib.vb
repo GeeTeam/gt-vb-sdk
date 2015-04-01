@@ -14,7 +14,7 @@ Public Class Geetestlib
     Public challenge As String
     Public productType As String
     Public popupBtnID As String
-    Private version As String = "2015.04.01"
+    Private version As String = "2.15.4.1"
     Public Sub New(ByVal key As String)
         privateKey = privateKey
     End Sub

@@ -22,9 +22,7 @@
        </tr>
        <tr>
           <td>
-              
-              <asp:Button ID="Button1" runat="server" Text="Login" />
-              
+              <asp:Button ID="Button1" runat="server" Text="Login" />              
           </td>
        </tr>
     </table>
