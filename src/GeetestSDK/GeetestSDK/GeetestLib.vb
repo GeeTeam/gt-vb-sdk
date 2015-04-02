@@ -14,7 +14,8 @@ Public Class Geetestlib
     Public challenge As String
     Public productType As String
     Public popupBtnID As String
-    Private version As String = "2.15.4.1.1"
+    Public https As Boolean = False
+    Private version As String = "2.15.4.2.1"
     Public Sub New(ByVal key As String)
         privateKey = privateKey
     End Sub
@@ -47,7 +48,11 @@ Public Class Geetestlib
     End Function
 
     Public Function get_apiurl()
-        Dim url As String = String.Format("http://api.geetest.com/get.php?gt={0}&challenge={1}", captchaID, challenge)
+        Dim http As String = "http"
+        If https Then
+            http = "https"
+        End If
+        Dim url As String = String.Format("{0}://api.geetest.com/get.php?gt={1}&challenge={2}", http, captchaID, challenge)
         If productType <> vbNullString Then
             url = url + "&product=" + productType
             If productType = "popup" Then
